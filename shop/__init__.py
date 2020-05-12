@@ -48,43 +48,43 @@ def create_app(test_config=None):
 
     @app.route('/', methods=('GET', 'POST'))
     def index():
-        return render_template('index.html')
+        return render_template('index.html', url='index')
 
-    @app.route('/about', methods=('GET', 'POST'))
+    @app.route('/about-us', methods=('GET', 'POST'))
     def about():
-        return render_template('about.html')
+        return render_template('about.html', url='about')
 
     @app.route('/shop', methods=('GET', 'POST'))
     def shop():
-        return render_template('shop.html')
+        return render_template('shop.html', url='shop')
 
     @app.route('/shop-detail', methods=('GET', 'POST'))
     def shop_detail():
-        return render_template('shop-detail.html')
+        return render_template('shop-detail.html', url='shop-detail')
 
     @app.route('/cart', methods=('GET', 'POST'))
     def cart():
-        return render_template('cart.html')
+        return render_template('cart.html', url='cart')
 
     @app.route('/checkout', methods=('GET', 'POST'))
     def checkout():
-        return render_template('checkout.html')
+        return render_template('checkout.html', url='checkout')
 
     @app.route('/account', methods=('GET', 'POST'))
     def account():
-        return render_template('account.html')
+        return render_template('account.html', url='account')
 
     @app.route('/wishlist', methods=('GET', 'POST'))
     def wishlist():
-        return render_template('wishlist.html')
+        return render_template('wishlist.html', url='wishlist')
     
     @app.route('/gallery', methods=('GET', 'POST'))
     def gallery():
-        return render_template('gallery.html')
+        return render_template('gallery.html', url='gallery')
 
-    @app.route('/contact', methods=('GET', 'POST'))
+    @app.route('/contact-us', methods=('GET', 'POST'))
     def contact():
-        return render_template('contact.html')
+        return render_template('contact.html', url='contact')
 
     @app.route('/send_email', methods=('GET', 'POST'))
     def send_email():
@@ -102,9 +102,9 @@ def create_app(test_config=None):
                 msg.body=message
                 thr = Thread(target=send_async_email, args=[app, msg])
                 thr.start()
-                return redirect('{}{}'.format(request.host_url,'#contact'))
+                # return redirect('{}{}'.format(request.host_url,'#contact'))
 
-        return render_template('index.html')
+        return render_template('contact.html', url='contact')
 
     return app
 

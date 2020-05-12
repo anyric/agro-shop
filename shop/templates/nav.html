@@ -74,9 +74,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item active"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
-                    <li class="dropdown">
+                    {% if url == 'index' %} <li class="nav-item active"> {% else %}
+                        <li class="nav-item"> {% endif %}
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    {% if url == 'about' %} <li class="nav-item active"> {% else %}
+                        <li class="nav-item"> {% endif %}
+                    <a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
+                    {% if url in ['shop', 'shop-detail', 'cart', 'checkout', 'account', 'wishlist'] %}
+                    <li class="dropdown active"> {% else %} <li class="dropdown"> {% endif %}
                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('shop') }}">Sidebar Shop</a></li>
@@ -87,8 +92,20 @@
                             <li><a href="{{ url_for('wishlist') }}">Wishlist</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a></li>
+                    {% if url == 'gallery' %} <li class="nav-item active"> {% else %}
+                        <li class="nav-item"> {% endif %}
+                    <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a></li>
+                    {% if url == 'contact' %} <li class="nav-item active"> {% else %}
+                        <li class="nav-item"> {% endif %}
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a></li>
+                    <li class="search">
+                        <div class="input-group input-group-sm mt-1 pt-1">
+                            <input class="form-control" placeholder="Search" aria-label="Search" type="text">
+                            <div class="input-group-append">
+                                <button class="btn btn-theme" type="button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -96,9 +113,8 @@
             <!-- Start Atribute Navigation -->
             <div class="attr-nav">
                 <ul>
-                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                     <li class="side-menu">
-                        <a href="#">
+                        <a href="{{ url_for('cart') }}">
                             <i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span>
                             <p>My Cart</p>
