@@ -679,7 +679,8 @@
      color: #ffffff;
 }
  .hvr-hover{
-	 overflow: hidden;
+     overflow: hidden;
+     color: #fff;
 }
  ul.cart-list > li.total > .btn:hover{
      color: #ffffff;
@@ -786,10 +787,10 @@
      font-family: 'Poppins', sans-serif;
      font-weight: 500;
      font-size: 64px;
-     color: #fff;
+     color: rgb(241, 199, 59);
 }
  .cover-slides p{
-     font-size: 18px;
+     font-size: 24px;
      color: #fff;
      padding-bottom: 30px;
 }
