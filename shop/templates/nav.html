@@ -4,11 +4,10 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="right-phone-box">
-                    <p>Call US :- <a href="#"> +256 777 282 157</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="{{ url_for('account') }}"><i class="fa fa-user s_color"></i> My Account</a></li>
+                        <li><a href="{{ url_for('contact') }}"><i class="fas fa-phone ml-4"></i> +256 777 282 157</a></li>
                         <li><a href="{{ url_for('contact') }}"><i class="fas fa-location-arrow"></i> Our location</a></li>
                         <li><a href="{{ url_for('contact') }}"><i class="fas fa-headset"></i> Contact Us</a></li>
                     </ul>
@@ -16,42 +15,34 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box text-white">
-                    <!-- <select id="basic" 
-                        class="selectpicker show-tick form-control"
-                        data-placeholder="Sign In"
-                        onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"
-                    >
-                        <option value="{{ url_for('register') }}">Register Here</option>
-                        <option value="{{ url_for('login') }}">Sign In</option>
-                    </select> -->
                     <a class="text-warning" href="{{ url_for('register') }}">Sign Up</a> | <a class="text-warning" href="{{ url_for('login') }}">Sign In</a>
                 </div>
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
                             <li>
-                                <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
+                                <i class="fa fa-question-circle"></i> Are you looking for farm inputs?
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
+                                <i class="fa fa-check-circle"></i> Vegetable seeds
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
+                                <i class="fa fa-check-circle"></i> Grain seeds
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> Off 50%! Shop Now
+                                <i class="fa fa-check-circle"></i> Root & Tuberous
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
+                                <i class="fa fa-check-circle"></i> Fruit seeds
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
+                                <i class="fa fa-check-circle"></i> Tools & Machinery
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
+                                <i class="fa fa-check-circle"></i> Consultation & Advisory
                             </li>
                             <li>
-                                <i class="fab fa-opencart"></i> Off 50%! Shop Now 
+                                <i class="fa fa-cart-plus"></i> Shop Now
                             </li>
                         </ul>
                     </div>

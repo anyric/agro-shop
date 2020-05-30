@@ -26,7 +26,7 @@
                         <div class="title-left">
                             <h3>Billing address</h3>
                         </div>
-                        <form class="needs-validation" novalidate>
+                        <form class="needs-validation" validate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">First name *</label>
@@ -106,6 +106,10 @@
                                     <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
                                     <label class="custom-control-label" for="paypal">Paypal</label>
                                 </div>
+                                <div class="custom-control custom-radio">
+                                    <input id="momo" name="paymentMethod" type="radio" class="custom-control-input" required>
+                                    <label class="custom-control-label" for="momo">Momo Pay</label>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -142,7 +146,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr class="mb-1"> </form>
+                            <div class="col-12 d-flex shopping-box"> 
+                                <button class="ml-auto btn hvr-hover" id="submit" type="submit">Place Order</button>
+                            </div>
+                            <hr class="mb-1">
+                        </form>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-6 mb-3">
@@ -229,7 +237,6 @@
                                 </div>
                                 <hr> </div>
                         </div>
-                        <div class="col-12 d-flex shopping-box"> <a href="checkout.html" class="ml-auto btn hvr-hover">Place Order</a> </div>
                     </div>
                 </div>
             </div>
