@@ -14,9 +14,9 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="login-box text-white">
+                <!-- <div class="login-box text-white">
                     <a class="text-warning" href="{{ url_for('register') }}">Sign Up</a> | <a class="text-warning" href="{{ url_for('login') }}">Sign In</a>
-                </div>
+                </div> -->
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
@@ -27,13 +27,16 @@
                                 <i class="fa fa-check-circle"></i> Vegetable seeds
                             </li>
                             <li>
-                                <i class="fa fa-check-circle"></i> Grain seeds
+                                <i class="fa fa-check-circle"></i> Cereal seeds
                             </li>
                             <li>
-                                <i class="fa fa-check-circle"></i> Root & Tuberous
+                                <i class="fa fa-check-circle"></i> Pesticides
                             </li>
                             <li>
-                                <i class="fa fa-check-circle"></i> Fruit seeds
+                                <i class="fa fa-check-circle"></i> Fertilizers
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle"></i> Herbicides                                                                                                                                                                                                                                                                                                                                                               
                             </li>
                             <li>
                                 <i class="fa fa-check-circle"></i> Tools & Machinery
@@ -42,7 +45,7 @@
                                 <i class="fa fa-check-circle"></i> Consultation & Advisory
                             </li>
                             <li>
-                                <i class="fa fa-cart-plus"></i> Shop Now
+                                <i class="fas fa-headset"></i> Contact Us Now
                             </li>
                         </ul>
                     </div>
@@ -81,7 +84,7 @@
                     <a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
                     {% if url in ['shop', 'shop-detail', 'cart', 'checkout', 'account', 'wishlist'] %}
                     <li class="dropdown active"> {% else %} <li class="dropdown"> {% endif %}
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                        <!-- <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a> -->
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('shop') }}">Sidebar Shop</a></li>
                             <li><a href="{{ url_for('shop_detail') }}">Shop Detail</a></li>
@@ -94,14 +97,14 @@
                     {% if url == 'contact' %} <li class="nav-item active"> {% else %}
                         <li class="nav-item"> {% endif %}
                     <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a></li>
-                    <li class="search">
+                    <!-- <li class="search">
                         <div class="input-group input-group-sm mt-1 pt-1">
                             <input class="form-control" placeholder="Search" aria-label="Search" type="text">
                             <div class="input-group-append">
                                 <button class="btn btn-theme" type="button"><i class="fa fa-search"></i></button>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -110,11 +113,11 @@
             <div class="attr-nav">
                 <ul>
                     <li class="side-menu">
-                        <a href="{{ url_for('cart') }}">
+                        <!-- <a href="{{ url_for('cart') }}">
                             <i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span>
                             <p>My Cart</p>
-                        </a>
+                        </a> -->
                     </li>
                 </ul>
             </div>

@@ -1,89 +1,105 @@
-<!-- Start Instagram Feed  -->
-<div class="instagram-box">
+<!-- Start Feed  -->
+<div id="feed" class="instagram-box">
     <div class="main-instagram owl-carousel owl-theme">
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/tools.jpg" alt="" />
+                <img src="static/images/foot2.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer1.jpg" alt="" />
+                <img src="static/images/foot1.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer.jpg" alt="" />
+                <img src="static/images/foot6.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer2.jpg" alt="" />
+                <img src="static/images/foot3.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer4.jpg" alt="" />
+                <img src="static/images/foot0.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer9.jpg" alt="" />
+                <img src="static/images/foot7.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer8.jpg" alt="" />
+                <img src="static/images/foot9.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer7.jpg" alt="" />
+                <img src="static/images/foot3.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer6.jpg" alt="" />
+                <img src="static/images/foot10.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="static/images/footer5.jpg" alt="" />
+                <img src="static/images/foot5.jpg" alt="" />
                 <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="static/images/foot8.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="static/images/foot12.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#feed"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- End Instagram Feed  -->
+<!-- End Feed  -->
 
 <!-- Start Footer  -->
 <footer>
@@ -100,14 +116,14 @@
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
-                        <h3>Newsletter</h3>
+                        <!-- <h3>Newsletter</h3>
                         <form class="newsletter-box">
                             <div class="form-group">
                                 <input class="" type="email" name="Email" placeholder="Email Address*" />
                                 <i class="fa fa-envelope"></i>
                             </div>
                             <button class="btn hvr-hover" type="submit">Submit</button>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -126,26 +142,31 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
                         <h4>About Apiviva</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                        <a href="{{ url_for('about')}}">
+                            <p>
+                                The company was founded in 2019 by Emmanuel Apiku and Vivian Ababiku Apiku. 
+                                Four (04) years before, Emmanuel Apiku was working as the staff in the Agricultural 
+                                Department of a Charitable missionary organization as the Principal Agricultural 
+                                Extension Officer (PAEO)/Agricultural Livelihood Focal person ...
+                            </p> 
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link">
-                        <h4>Information</h4>
+                        <h4>Quick Links</h4>
                         <ul>
+                            <li><a href="{{ url_for('index')}}">Home</a></li>
                             <li><a href="{{ url_for('about')}}">About Us</a></li>
                             <li><a href="{{ url_for('services')}}">Services</a></li>
-                            <li><a href="{{ url_for('shop')}}">Shop</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Delivery Information</a></li>
+                            <!-- <li><a href="{{ url_for('shop')}}">Shop</a></li> -->
+                            <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link-contact">
-                        <h4>Contact Us</h4>
+                        <h4>Contacts</h4>
                         <ul>
                             <li>
                                 <p><i class="fas fa-map-marker-alt"></i>Address: Hoti Road Plot 2, <br>Moyo Town Council,<br> P.O.Box 190, Moyo </p>
