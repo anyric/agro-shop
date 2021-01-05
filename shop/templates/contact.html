@@ -25,29 +25,29 @@
                     <div class="contact-form-right">
                         <h2>GET IN TOUCH</h2>
                         <p>Do you have a burning issue, feedback or comment, just drop us a message here and we shall get right back as soon as possible.</p>
-                        <form id="contactForm">
+                        <form action="{{ url_for('send_email') }}" method="post" role="form" class="contactForm">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required data-error="Please enter your name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                        <input type="text" placeholder="Your Email" class="form-control" name="email" required data-error="Please enter your email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required data-error="Please enter your Subject">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+                                        <textarea class="form-control" name="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="submit-button text-center">
@@ -71,6 +71,10 @@
                             <li>Or</li>
                             <li>
                                 <p><i class="fas fa-map-marker-alt"></i>Address: Adjumani Town Council,<br> Asala Road, Opposite Main Market </p>
+                            </li>
+                            <li>Or</li>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Yumbe Town Council,<br> Asala Road, Opposite Main Market </p>
                             </li>
                             <li>
                                 <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+256777282157">+256 777 282 157</a></p>

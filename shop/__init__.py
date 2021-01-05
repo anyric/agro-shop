@@ -42,7 +42,6 @@ def create_app(test_config=None):
         with app.app_context():
             try:
                 mail.send(msg)
-
             except Exception as e:
                 print(str(e))
 
