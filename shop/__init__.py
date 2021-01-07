@@ -13,11 +13,11 @@ def create_app(test_config=None):
     mail = Mail()
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config['MAIL_SERVER']='smtp.gmail.com'
-    app.config['MAIL_PORT'] = 465
+    app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
+    app.config['MAIL_PORT'] = 587
     app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
     app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-    app.config['MAIL_USE_TLS'] = False
+    app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USE_SSL'] = True
     mail.init_app(app)
     app.config.from_mapping(
@@ -102,10 +102,10 @@ def create_app(test_config=None):
             subject = request.form['subject']
             content = request.form['message']
             message = 'My name is ' + name + ' and email is ' + email + '\n' +  content
-            recipient = os.getenv('MAIL_RECIPIENTS').split(",")
+            recipient = os.getenv('MAIL_RECIPIENTS')
 
             if name is not None and email is not None and subject is not None and content is not None:
-                msg = Message(subject, sender=os.getenv('MAIL_USERNAME'), recipients=recipient)
+                msg = Message(subject, sender=os.getenv('MAIL_USERNAME'), recipients=recipient.split(","))
                 msg.body=message
                 thr = Thread(target=send_async_email, args=[app, msg])
                 thr.start()
