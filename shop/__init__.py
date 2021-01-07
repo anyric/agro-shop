@@ -105,10 +105,11 @@ def create_app(test_config=None):
             recipient = os.getenv('MAIL_RECIPIENTS').split(",")
 
             if name is not None and email is not None and subject is not None and content is not None:
-                msg = Message(subject, sender=email, recipients=recipient)
+                msg = Message(subject, sender=os.getenv('MAIL_USERNAME'), recipients=recipient)
                 msg.body=message
                 thr = Thread(target=send_async_email, args=[app, msg])
                 thr.start()
+                return redirect(request.host_url + 'contact-us')
 
         return render_template('contact.html', url='contact')
 
