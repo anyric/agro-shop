@@ -85,27 +85,16 @@
                     <a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
                     {% if url in ['shop', 'shop-detail', 'cart', 'checkout', 'account', 'wishlist'] %}
                     <li class="dropdown active"> {% else %} <li class="dropdown"> {% endif %}
-                        <!-- <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a> -->
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('shop') }}">Sidebar Shop</a></li>
                             <li><a href="{{ url_for('shop_detail') }}">Shop Detail</a></li>
                             <li><a href="{{ url_for('cart') }}">Cart</a></li>
-                            <!-- <li><a href="{{ url_for('checkout') }}">Checkout</a></li> -->
-                            <!-- <li><a href="{{ url_for('account') }}">My Account</a></li> -->
                             <li><a href="{{ url_for('wishlist') }}">Wishlist</a></li>
                         </ul>
                     </li>
                     {% if url == 'contact' %} <li class="nav-item active"> {% else %}
                         <li class="nav-item"> {% endif %}
                     <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a></li>
-                    <!-- <li class="search">
-                        <div class="input-group input-group-sm mt-1 pt-1">
-                            <input class="form-control" placeholder="Search" aria-label="Search" type="text">
-                            <div class="input-group-append">
-                                <button class="btn btn-theme" type="button"><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -114,11 +103,6 @@
             <div class="attr-nav">
                 <ul>
                     <li class="side-menu">
-                        <!-- <a href="{{ url_for('cart') }}">
-                            <i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-                            <p>My Cart</p>
-                        </a> -->
                     </li>
                 </ul>
             </div>
